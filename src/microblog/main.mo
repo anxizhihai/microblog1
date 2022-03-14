@@ -33,13 +33,13 @@ actor {
 //    var messages : List.List<Message> = List.nil();
 
    public shared (msg) func post(text: Text) : async () {
-       assert(Principal.toText(msg.caller) == "lhhzc-wacws-ffzgw-5scj7-al3iu-m375e-46qbp-qusrw-vkzks-ct7jn-rqe" );
-       var m1 = {
+    //    assert(Principal.toText(msg.caller) == "lhhzc-wacws-ffzgw-5scj7-al3iu-m375e-46qbp-qusrw-vkzks-ct7jn-rqe" );
+       var information = {
             msg = text;
             time = Time.now();
        };
     //    messages := List.push(text, messages)
-     messages := List.push<Message>(m1, messages);
+     messages := List.push<Message>(information, messages);
 
    };
 
